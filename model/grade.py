@@ -1,6 +1,6 @@
 from typing import List
 
-from subject import Subject
+from model.subject import Subject
 
 
 class Grade:
