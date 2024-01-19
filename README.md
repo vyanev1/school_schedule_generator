@@ -7,7 +7,7 @@ This project provides a simple scheduling system for high school classes. It inc
 ## Files
 
 - `main.py`: Main script containing class scheduling logic and schedule printing.
-- `models`: The directory contains classes for `Grade`, `Subject`, `Schedule`, and `ScheduleFactory`.
+- `model`: The directory contains classes for `Grade`, `Subject`, `Teacher`, `Schedule`, and `TimeSlot`.
 - `README.md`: Documentation file (you are here).
 
 ## How to Use
