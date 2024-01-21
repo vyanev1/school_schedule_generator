@@ -10,9 +10,8 @@ class Teacher:
             for day in days_of_week
         }
 
-    def occupy(self, day: str, start: int, end: int, grade_number: int, subject_name: str) -> None:
-        for i in range(start, end):
-            self.schedule[day][i].occupy(grade_number, subject_name, self.name)
+    def occupy(self, day: str, slot: int, grade_number: int, subject_name: str) -> None:
+        self.schedule[day][slot].occupy(grade_number, subject_name, self.name)
 
     def has_occupied_slots(self, day: str, start: int = None, end: int = None) -> bool:
         start = min(start, len(self.schedule[day])) if start is not None else 0

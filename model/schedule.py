@@ -47,7 +47,7 @@ class Schedule:
         print(f"Marking {start_time_str} to {end_time_str} on {day} as occupied by {(subject.name, teacher.name)}")
         for slot in range(start_slot, end_slot):
             self.schedule[day][slot].occupy(grade.grade_number, subject.name, teacher.name)
-            teacher.occupy(day, start_slot, end_slot, grade.grade_number, subject.name)
+            teacher.occupy(day, slot, grade.grade_number, subject.name)
 
     def get_least_busy_days(self) -> List[str]:
         return sorted(self.schedule.keys(), key=lambda day: len(self.get_non_empty_slots(day)))

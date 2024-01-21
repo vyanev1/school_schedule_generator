@@ -6,9 +6,9 @@ This project provides a simple scheduling system for high school classes. It inc
 
 ## Files
 
-- `main.py`: Main script containing class scheduling logic and schedule printing.
 - `constants`: The directory contains defined constants in the program
 - `model`: The directory contains classes for `Grade`, `Subject`, `Teacher`, `Schedule`, and `TimeSlot`.
+- `main.py`: Main script containing class scheduling logic and schedule printing.
 - `README.md`: Documentation file (you are here).
 
 ## How to Use
@@ -52,7 +52,7 @@ schedule_classes(grade_schedules)
 
 # Print the resulting schedules
 for s in grade_schedules:
-    print_schedule(s)
+    s.print_schedule()
 ```
 
 ## Contributors
