@@ -8,6 +8,7 @@ This project provides a simple scheduling system for high school classes. It inc
 
 - `main.py`: Main script containing class scheduling logic and schedule printing.
 - `models`: The directory contains classes for `Grade`, `Subject`, `Schedule`, and `ScheduleFactory`.
+- `constants`: The directory contains defined constants in the program
 - `README.md`: Documentation file (you are here).
 
 ## How to Use
@@ -25,23 +26,25 @@ Represents a school grade with associated subjects and their details.
 
 Represents a school subject with associated teachers and scheduling constraints.
 
+### `Teacher`
+Represents a school teacher, contains information about the teacher's name and occupied time slots
+
+### `TimeSlot`
+Represents a time slot in the schedule, contains information about the start time, end time, subject and teacher name
+
 ### `Schedule`
 
 Handles the scheduling of classes for a specific grade, considering time slots and teacher availability.
-
-### `ScheduleFactory`
-
-Creates schedules for grades based on predefined subjects.
 
 ## Sample Usage
 
 ```python
 # Define grades with subjects and create schedules
 eighth_grade = Grade(8, subjects=[...])
-eighth_grade_schedule = ScheduleFactory.create_schedule(eighth_grade)
+eighth_grade_schedule = Schedule(eighth_grade)
 
 ninth_grade = Grade(9, subjects=[...])
-ninth_grade_schedule = ScheduleFactory.create_schedule(ninth_grade)
+ninth_grade_schedule = Schedule(ninth_grade)
 
 # Schedule classes for grades
 grade_schedules = [eighth_grade_schedule, ninth_grade_schedule]

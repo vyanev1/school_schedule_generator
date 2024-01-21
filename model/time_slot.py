@@ -1,7 +1,3 @@
-# Define days of the week
-days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
-
 class TimeSlot:
     def __init__(self, day: str, start: int, end: int, subject_name: str = None, teacher_name: str = None):
         self.day = day
@@ -10,7 +6,8 @@ class TimeSlot:
         self.subject_name = subject_name
         self.teacher_name = teacher_name
 
-    def occupy(self, subject_name: str, teacher_name: str):
+    def occupy(self, grade_number: int, subject_name: str, teacher_name: str):
+        self.grade_number = grade_number
         self.subject_name = subject_name
         self.teacher_name = teacher_name
 

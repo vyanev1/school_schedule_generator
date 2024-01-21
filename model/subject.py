@@ -12,6 +12,6 @@ class Subject:
         self.classes_per_week = classes_per_week
         self.max_daily_slots = max_daily_slots
 
-    def get_least_busy_teacher(self, day: str, start: int = None, end: int = None) -> Teacher:
+    def get_least_busy_teacher(self, day: str, start: int = None, end: int = None) -> Teacher | None:
         available_teachers = [t for t in self.teachers if not t.has_occupied_slots(day, start, end)]
-        return min(available_teachers, key=lambda t: len(t.schedule[day]))
+        return min(available_teachers, key=lambda t: len(t.schedule[day]), default=None)
