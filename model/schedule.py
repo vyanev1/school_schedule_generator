@@ -44,7 +44,7 @@ class Schedule:
                                     subject: Subject, teacher: Teacher, grade: Grade):
         start_time_str = self.get_time_slot_string(start_slot)
         end_time_str = self.get_time_slot_string(end_slot)
-        print(f"Marking {start_time_str} to {end_time_str} on {day} as occupied by {(subject.name, teacher.name)}")
+        # print(f"Marking {start_time_str} to {end_time_str} on {day} as occupied by {(subject.name, teacher.name)}")
         for slot in range(start_slot, end_slot):
             self.schedule[day][slot].occupy(grade.grade_number, subject.name, teacher.name)
             teacher.occupy(day, slot, grade.grade_number, subject.name)

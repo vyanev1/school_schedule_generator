@@ -1,8 +1,10 @@
 class TimeSlot:
-    def __init__(self, day: str, start: int, end: int, subject_name: str = None, teacher_name: str = None):
+    def __init__(self, day: str, start: int, end: int,
+                 grade_number: int = None, subject_name: str = None, teacher_name: str = None):
         self.day = day
         self.start = start
         self.end = end
+        self.grade_number = grade_number
         self.subject_name = subject_name
         self.teacher_name = teacher_name
 
